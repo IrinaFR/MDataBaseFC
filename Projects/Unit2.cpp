@@ -25,3 +25,12 @@ void __fastcall TForm2::DBLookupComboBox1Click(TObject *Sender)
  ADOQuery1->Open();
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm2::BitBtn4Click(TObject *Sender)
+{
+	//Form1->ADOQuery1->SQL->Clear();
+	//Form1->ADOQuery1->SQL->Add()"";
+	Form1->ADOQuery1->Active = true;
+	Form2->Close();
+}
+//---------------------------------------------------------------------------
+

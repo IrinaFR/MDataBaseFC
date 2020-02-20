@@ -20,6 +20,9 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 void __fastcall TForm1::BitBtn1Click(TObject *Sender)
 {
 Form2->Show();
+ADOQuery1->Close();
+ADOQuery1->Active = false;
+
 }
 //---------------------------------------------------------------------------
 
@@ -38,6 +41,12 @@ void __fastcall TForm1::SearchBox1Change(TObject *Sender)
 	ADOQuery1->SQL->Text = "SELECT [Id_abiturient],[Surname],[Name],[Patronymic],[FormLearning],[abiturient].[Qualification],[specialty].[specialty],[EntryExams],[USE] FROM abiturient JOIN specialty ON abiturient.Id_specialty = specialty.Id_specialty WHERE Surname LIKE '" +valueSearch+"%'";
 	ADOQuery1->Active = true;
 	ADOQuery1->Open();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::N5Click(TObject *Sender)
+{
+    Form3->Show();
 }
 //---------------------------------------------------------------------------
 

@@ -83,6 +83,7 @@ __published:	// IDE-managed Components
 	TDBEdit *DBEdit4;
 	TDBEdit *DBEdit5;
 	void __fastcall DBLookupComboBox1Click(TObject *Sender);
+	void __fastcall BitBtn4Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm2(TComponent* Owner);

@@ -10,6 +10,7 @@ object Form1: TForm1
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
+  Menu = MainMenu1
   OldCreateOrder = False
   PixelsPerInch = 96
   TextHeight = 13
@@ -212,5 +213,31 @@ object Form1: TForm1
     DataSet = ADOQuery1
     Left = 200
     Top = 96
+  end
+  object MainMenu1: TMainMenu
+    Left = 296
+    Top = 16
+    object N1: TMenuItem
+      Caption = #1060#1072#1081#1083
+      object N2: TMenuItem
+        Caption = #1055#1086#1076#1082#1083#1102#1095#1080#1090#1100#1089#1103' '#1082' '#1073#1072#1079#1077
+      end
+      object N3: TMenuItem
+        Caption = #1047#1072#1082#1088#1099#1090#1100' '#1087#1088#1086#1075#1088#1072#1084#1084#1091
+      end
+    end
+    object N4: TMenuItem
+      Caption = #1041#1072#1079#1072
+      object N5: TMenuItem
+        Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1092#1072#1082#1091#1083#1100#1090#1077#1090
+        OnClick = N5Click
+      end
+      object N6: TMenuItem
+        Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1089#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1100
+      end
+      object N7: TMenuItem
+        Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1087#1088#1086#1092#1080#1083#1100#1085#1099#1081' '#1087#1088#1077#1076#1084#1077#1090
+      end
+    end
   end
 end

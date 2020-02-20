@@ -2,7 +2,7 @@ object Form3: TForm3
   Left = 0
   Top = 0
   Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1092#1072#1082#1091#1083#1100#1090#1077#1090
-  ClientHeight = 285
+  ClientHeight = 286
   ClientWidth = 456
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -25,21 +25,6 @@ object Form3: TForm3
     Font.Height = -12
     Font.Name = 'Tahoma'
     Font.Style = []
-    ParentFont = False
-  end
-  object Label2: TLabel
-    Left = 8
-    Top = 246
-    Width = 372
-    Height = 14
-    Caption = #1055#1086#1089#1083#1077' '#1082#1072#1078#1076#1086#1075#1086' '#1076#1086#1073#1072#1074#1083#1077#1085#1080#1103' '#1080#1083#1080' '#1091#1076#1072#1083#1077#1085#1080#1103' '#1085#1072#1078#1080#1084#1072#1081#1090#1077' '#1089#1086#1093#1088#1072#1085#1080#1090#1100
-    Color = clHotLight
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clRed
-    Font.Height = -12
-    Font.Name = 'Tahoma'
-    Font.Style = []
-    ParentColor = False
     ParentFont = False
   end
   object DBGrid1: TDBGrid
@@ -83,6 +68,7 @@ object Form3: TForm3
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 1
+    OnClick = BitBtn1Click
   end
   object DBEdit1: TDBEdit
     Left = 8
@@ -93,22 +79,8 @@ object Form3: TForm3
     DataSource = DataSource1
     TabOrder = 2
   end
-  object BitBtn2: TBitBtn
-    Left = 119
-    Top = 201
-    Width = 105
-    Height = 33
-    Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 3
-  end
   object BitBtn3: TBitBtn
-    Left = 230
+    Left = 165
     Top = 201
     Width = 105
     Height = 33
@@ -119,7 +91,8 @@ object Form3: TForm3
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 3
+    OnClick = BitBtn3Click
   end
   object BitBtn4: TBitBtn
     Left = 341
@@ -133,17 +106,15 @@ object Form3: TForm3
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 5
+    TabOrder = 4
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 266
+    Top = 267
     Width = 456
     Height = 19
     Panels = <>
-    ExplicitLeft = 200
-    ExplicitTop = 256
-    ExplicitWidth = 0
+    ExplicitTop = 266
   end
   object MainMenu1: TMainMenu
     Left = 392

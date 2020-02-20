@@ -14,3 +14,22 @@ __fastcall TForm3::TForm3(TComponent* Owner)
 {
 }
 //---------------------------------------------------------------------------
+void __fastcall TForm3::BitBtn1Click(TObject *Sender)
+{
+	String nameFacultet = DBEdit1->Text;
+	ADOQuery1->SQL->Text = "INSERT INTO facultet VALUES ('" +nameFacultet+ "')" ;
+	ADOQuery1->ExecSQL();
+	ADOQuery1->SQL->Text = "USE FosterComission Select * FROM facultet";
+	ADOQuery1->Active = true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm3::BitBtn3Click(TObject *Sender)
+{
+	ADOQuery1->SQL->Text = "DELETE facultet WHERE facultet = ('" +DBEdit1->Text+ "')";
+	ADOQuery1->ExecSQL();
+	ADOQuery1->SQL->Text = "USE FosterComission Select * FROM facultet";
+	ADOQuery1->Active = true;
+}
+//---------------------------------------------------------------------------
+

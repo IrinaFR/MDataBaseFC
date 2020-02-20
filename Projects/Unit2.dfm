@@ -330,6 +330,7 @@ object Form2: TForm2
     Caption = #1044#1086#1073#1072#1074#1080#1090#1100
     DragCursor = crHandPoint
     TabOrder = 2
+    OnClick = BitBtn4Click
   end
   object Memo1: TMemo
     Left = 24
