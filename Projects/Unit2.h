@@ -1,0 +1,93 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit2H
+#define Unit2H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <System.Actions.hpp>
+#include <Vcl.ActnList.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Menus.hpp>
+#include <Vcl.ComCtrls.hpp>
+#include <Vcl.Buttons.hpp>
+#include <Data.DB.hpp>
+#include <Data.Win.ADODB.hpp>
+#include <Vcl.DBCtrls.hpp>
+#include <Vcl.Mask.hpp>
+//---------------------------------------------------------------------------
+class TForm2 : public TForm
+{
+__published:	// IDE-managed Components
+	TLabel *Label1;
+	TLabel *Label2;
+	TLabel *Label3;
+	TMainMenu *MainMenu1;
+	TMenuItem *N1;
+	TMenuItem *N2;
+	TMenuItem *N3;
+	TMenuItem *N4;
+	TMenuItem *N5;
+	TMenuItem *N6;
+	TLabel *Label4;
+	TLabel *Label5;
+	TLabel *Label6;
+	TLabel *Label7;
+	TLabel *Label8;
+	TLabel *Label9;
+	TLabel *Label10;
+	TLabel *Label11;
+	TLabel *Label12;
+	TLabel *Label13;
+	TLabel *Label14;
+	TLabel *Label15;
+	TLabel *Label16;
+	TBitBtn *BitBtn1;
+	TBitBtn *BitBtn2;
+	TBitBtn *BitBtn4;
+	TMemo *Memo1;
+	TPanel *Panel1;
+	TPanel *Panel2;
+	TDataSource *DataSource1;
+	TDBLookupComboBox *DBLookupComboBox1;
+	TDataSource *DataSource2;
+	TDBLookupComboBox *DBLookupComboBox2;
+	TADOTable *ADOTable2;
+	TADOQuery *ADOQuery1;
+	TDBEdit *DBEdit1;
+	TDBEdit *DBEdit2;
+	TDBEdit *DBEdit3;
+	TDateTimePicker *DateTimePicker2;
+	TDBComboBox *DBComboBox1;
+	TDataSource *DataSource3;
+	TADOTable *ADOTable1;
+	TDBComboBox *DBComboBox2;
+	TDBCheckBox *DBCheckBox4;
+	TDBEdit *DBEdit6;
+	TDBCheckBox *DBCheckBox6;
+	TDBCheckBox *DBCheckBox7;
+	TDBEdit *DBEdit7;
+	TDBEdit *DBEdit8;
+	TDBLookupComboBox *DBLookupComboBox3;
+	TDBEdit *DBEdit9;
+	TDataSource *DataSource4;
+	TADOTable *ADOTable3;
+	TADOConnection *ADOConnection1;
+	TPanel *Panel3;
+	TDBCheckBox *DBCheckBox1;
+	TDBCheckBox *DBCheckBox2;
+	TDBCheckBox *DBCheckBox3;
+	TDBCheckBox *DBCheckBox5;
+	TDBEdit *DBEdit4;
+	TDBEdit *DBEdit5;
+	void __fastcall DBLookupComboBox1Click(TObject *Sender);
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm2(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm2 *Form2;
+//---------------------------------------------------------------------------
+#endif
