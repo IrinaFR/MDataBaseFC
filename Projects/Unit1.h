@@ -16,6 +16,7 @@
 #include <Vcl.Buttons.hpp>
 #include <Vcl.DBCtrls.hpp>
 #include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Mask.hpp>
 //---------------------------------------------------------------------------
 class TForm1 : public TForm
 {
@@ -38,9 +39,14 @@ __published:	// IDE-managed Components
 	TMenuItem *N5;
 	TMenuItem *N6;
 	TMenuItem *N7;
+	TDBEdit *DBEdit1;
+	TMenuItem *N8;
 	void __fastcall BitBtn1Click(TObject *Sender);
 	void __fastcall BitBtn3Click(TObject *Sender);
 	void __fastcall SearchBox1Change(TObject *Sender);
+	void __fastcall BitBtn4Click(TObject *Sender);
+	void __fastcall N6Click(TObject *Sender);
+	void __fastcall N7Click(TObject *Sender);
 	void __fastcall N5Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations

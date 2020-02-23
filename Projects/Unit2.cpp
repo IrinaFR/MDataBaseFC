@@ -17,20 +17,33 @@ __fastcall TForm2::TForm2(TComponent* Owner)
 //---------------------------------------------------------------------------
 void __fastcall TForm2::DBLookupComboBox1Click(TObject *Sender)
 {
- String valueFacultet = DBLookupComboBox1->Text;
- ADOQuery1->Close();
- ADOQuery1->SQL->Text = "USE FosterComission SELECT Id_specialty, specialty FROM specialty JOIN facultet ON specialty.Id_facultet = facultet.Id_facultet WHERE (facultet='" + valueFacultet + "')";
- Memo1->Lines->Text = valueFacultet + ' ' + ADOQuery1->SQL->Text;
- ADOQuery1->Active = true;
- ADOQuery1->Open();
+	String valueFacultet = DBLookupComboBox1->Text;
+	ADOQuery1->Close();
+	ADOQuery1->SQL->Text = "USE FosterComission SELECT Id_specialty, specialty FROM specialty JOIN facultet ON specialty.Id_facultet = facultet.Id_facultet WHERE (facultet='" + valueFacultet + "')";
+	ADOQuery1->Active = true;
+ 	ADOQuery1->Open();
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm2::BitBtn4Click(TObject *Sender)
 {
-	//Form1->ADOQuery1->SQL->Clear();
-	//Form1->ADOQuery1->SQL->Add()"";
+	ADOQuery3->SQL->Text = "INSERT INTO abiturient ([Surname],[Name],[Patronymic],[DateBorn],[FormLearning],[Id_facultet],[Qualification],[Id_specialty],[Statement],[Passport],[Photo],[Diplom],[QtyFive],[QtyFour],[QtyThree],[NeedHostel],[EntryExams],[USE],[Mathematics],[RussianLanguage],[Id_subject],[BallsProfile],[Info]) VALUES ('" +Edit1->Text+ "', '"+Edit2->Text+"', '" +Edit3->Text+ "', '" +DateTimePicker2->Date+ "', '" +ComboBox1->Text+ "', '" +DBLookupComboBox1->KeyValue+ "', '" +DBEdit1->Text+ "', '" +DBLookupComboBox2->KeyValue+ "', '" +CheckBox1->Checked+ "', '" +CheckBox2->Checked+ "', '" +CheckBox3->Checked+ "', '" +CheckBox4->Checked+ "', '" +Edit4->Text+ "', '" +Edit5->Text+ "', '" +Edit6->Text+ "', '" +CheckBox5->Checked+ "', '" +CheckBox6->Checked+ "', '" +CheckBox7->Checked+ "', '" +Edit7->Text+ "', '" +Edit8->Text+ "', '" +DBLookupComboBox3->KeyValue+ "', '" +Edit9->Text+ "', '" +Memo1->Lines->Text+ "')" ;
+	ADOQuery3->ExecSQL();
+	Form1->ADOQuery1->Active = false;
 	Form1->ADOQuery1->Active = true;
 	Form2->Close();
 }
 //---------------------------------------------------------------------------
+
+
+
+void __fastcall TForm2::DBLookupComboBox2Click(TObject *Sender)
+{
+	//String valueSpecialty = DBLookupComboBox2->Text;
+	//Label17->Caption = "";
+	//ADOQuery1->SQL->Text = "USE FosterComission SELECT Id_specialty, specialty FROM specialty JOIN facultet ON specialty.Id_facultet = facultet.Id_facultet WHERE (facultet='" + valueFacultet + "')";
+	//ADOQuery1->Active = true;
+	//ADOQuery1->Open();
+}
+//---------------------------------------------------------------------------
+
 

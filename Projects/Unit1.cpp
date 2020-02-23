@@ -7,6 +7,7 @@
 #include "Unit2.h"
 #include "Unit3.h"
 #include "Unit4.h"
+#include "Unit5.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -19,9 +20,8 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 //---------------------------------------------------------------------------
 void __fastcall TForm1::BitBtn1Click(TObject *Sender)
 {
+
 Form2->Show();
-ADOQuery1->Close();
-ADOQuery1->Active = false;
 
 }
 //---------------------------------------------------------------------------
@@ -41,6 +41,32 @@ void __fastcall TForm1::SearchBox1Change(TObject *Sender)
 	ADOQuery1->SQL->Text = "SELECT [Id_abiturient],[Surname],[Name],[Patronymic],[FormLearning],[abiturient].[Qualification],[specialty].[specialty],[EntryExams],[USE] FROM abiturient JOIN specialty ON abiturient.Id_specialty = specialty.Id_specialty WHERE Surname LIKE '" +valueSearch+"%'";
 	ADOQuery1->Active = true;
 	ADOQuery1->Open();
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::BitBtn4Click(TObject *Sender)
+{
+if(mrOk==MessageDlg("Вы точно хотите удалить ("+DBEdit1->Text+")?", mtConfirmation,  TMsgDlgButtons() <<mbOK<<mbCancel , 0)) {
+	ADOQuery1->SQL->Text = "DELETE abiturient WHERE Surname = ('" +DBEdit1->Text+ "')";
+	ADOQuery1->ExecSQL();
+	ADOQuery1->SQL->Text = "USE FosterComission SELECT [Id_abiturient],[Surname],[Name],[Patronymic],[FormLearning],[abiturient].[Qualification],[specialty].[specialty],[EntryExams],[USE] FROM abiturient JOIN specialty ON abiturient.Id_specialty = specialty.Id_specialty";
+	ADOQuery1->Active = true;
+	ShowMessage("Запись удалена");
+} else{}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::N6Click(TObject *Sender)
+{
+	Form4->Show();
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::N7Click(TObject *Sender)
+{
+	Form5->Show();
 }
 //---------------------------------------------------------------------------
 

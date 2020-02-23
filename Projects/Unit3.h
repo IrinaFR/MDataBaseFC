@@ -36,8 +36,12 @@ __published:	// IDE-managed Components
 	TBitBtn *BitBtn3;
 	TBitBtn *BitBtn4;
 	TStatusBar *StatusBar1;
+	TEdit *Edit1;
 	void __fastcall BitBtn1Click(TObject *Sender);
 	void __fastcall BitBtn3Click(TObject *Sender);
+	void __fastcall N2Click(TObject *Sender);
+	void __fastcall N3Click(TObject *Sender);
+	void __fastcall BitBtn4Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm3(TComponent* Owner);

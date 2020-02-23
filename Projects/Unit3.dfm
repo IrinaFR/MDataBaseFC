@@ -2,7 +2,7 @@ object Form3: TForm3
   Left = 0
   Top = 0
   Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1092#1072#1082#1091#1083#1100#1090#1077#1090
-  ClientHeight = 286
+  ClientHeight = 347
   ClientWidth = 456
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -15,8 +15,8 @@ object Form3: TForm3
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
-    Left = 8
-    Top = 144
+    Left = 10
+    Top = 224
     Width = 122
     Height = 14
     Caption = #1053#1072#1079#1074#1072#1085#1080#1077' '#1092#1072#1082#1091#1083#1100#1090#1077#1090#1072
@@ -31,7 +31,7 @@ object Form3: TForm3
     Left = 0
     Top = 0
     Width = 457
-    Height = 129
+    Height = 209
     DataSource = DataSource1
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
@@ -42,22 +42,15 @@ object Form3: TForm3
     Columns = <
       item
         Expanded = False
-        FieldName = 'Id_facultet'
-        Title.Caption = #8470
-        Width = 37
-        Visible = True
-      end
-      item
-        Expanded = False
         FieldName = 'facultet'
         Title.Caption = #1060#1072#1082#1091#1083#1100#1090#1077#1090
-        Width = 372
+        Width = 422
         Visible = True
       end>
   end
   object BitBtn1: TBitBtn
-    Left = 8
-    Top = 201
+    Left = 10
+    Top = 281
     Width = 105
     Height = 33
     Caption = #1044#1086#1073#1072#1074#1080#1090#1100
@@ -71,17 +64,18 @@ object Form3: TForm3
     OnClick = BitBtn1Click
   end
   object DBEdit1: TDBEdit
-    Left = 8
-    Top = 164
-    Width = 438
+    Left = 288
+    Top = 217
+    Width = 80
     Height = 21
     DataField = 'facultet'
     DataSource = DataSource1
     TabOrder = 2
+    Visible = False
   end
   object BitBtn3: TBitBtn
-    Left = 165
-    Top = 201
+    Left = 167
+    Top = 281
     Width = 105
     Height = 33
     Caption = #1059#1076#1072#1083#1080#1090#1100
@@ -95,8 +89,8 @@ object Form3: TForm3
     OnClick = BitBtn3Click
   end
   object BitBtn4: TBitBtn
-    Left = 341
-    Top = 201
+    Left = 343
+    Top = 281
     Width = 105
     Height = 33
     Caption = #1047#1072#1082#1088#1099#1090#1100
@@ -107,14 +101,22 @@ object Form3: TForm3
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 4
+    OnClick = BitBtn4Click
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 267
+    Top = 328
     Width = 456
     Height = 19
     Panels = <>
-    ExplicitTop = 266
+    ExplicitTop = 267
+  end
+  object Edit1: TEdit
+    Left = 10
+    Top = 244
+    Width = 438
+    Height = 21
+    TabOrder = 6
   end
   object MainMenu1: TMainMenu
     Left = 392
@@ -123,9 +125,11 @@ object Form3: TForm3
       Caption = #1060#1072#1081#1083
       object N2: TMenuItem
         Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+        OnClick = N2Click
       end
       object N3: TMenuItem
         Caption = #1054#1090#1084#1077#1085#1080#1090#1100
+        OnClick = N3Click
       end
     end
     object N4: TMenuItem

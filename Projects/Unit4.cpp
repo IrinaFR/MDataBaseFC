@@ -5,6 +5,7 @@
 
 #include "Unit4.h"
 #include "Unit1.h"
+#include "Unit2.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -21,3 +22,63 @@ Close();
 Form1->Show();
 }
 //---------------------------------------------------------------------------
+
+
+
+
+void __fastcall TForm4::BitBtn1Click(TObject *Sender)
+{
+	if(Edit1->Text == "" || DBLookupComboBox1->Text == "" || ComboBox1->Text == "") {
+		ShowMessage("Вы заполнили не все поля");
+	} else {
+		ADOQuery1->SQL->Text = "INSERT INTO specialty VALUES ('" +Edit1->Text+ "', '"+DBLookupComboBox1->KeyValue+"', '" +ComboBox1->Text+ "', '" +CheckBox1->Checked+ "', '" +CheckBox2->Checked+ "')" ;
+		ADOQuery1->ExecSQL();
+		ADOQuery1->SQL->Text = "USE FosterComission SELECT [specialty], [facultet].[facultet], [specialty].[Id_facultet], [Qualification], [Full-time], [Extramural] FROM specialty JOIN facultet ON specialty.Id_facultet = facultet.Id_facultet";
+		ADOQuery1->Active = true;
+		Edit1->Text = "";
+		CheckBox1->Checked = 0;
+		CheckBox2->Checked = 0;
+		Form2->ADOQuery1->Active = false;
+		Form2->ADOQuery1->Active = true;
+		StatusBar1->Panels->Items[0]->Text = "Специальность успешно добавлена";
+	}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm4::BitBtn5Click(TObject *Sender)
+{
+	if(mrOk==MessageDlg("Вы точно хотите удалить специальность ("+DBEdit1->Text+")?", mtConfirmation,  TMsgDlgButtons() <<mbOK<<mbCancel , 0)) {
+		ADOQuery1->SQL->Text = "DELETE specialty WHERE specialty = ('" +DBEdit1->Text+ "')";
+		ADOQuery1->ExecSQL();
+		ADOQuery1->SQL->Text = "USE FosterComission SELECT [specialty], [facultet].[facultet], [specialty].[Id_facultet], [Qualification], [Full-time], [Extramural] FROM specialty JOIN facultet ON specialty.Id_facultet = facultet.Id_facultet";
+		ADOQuery1->Active = true;
+        Form2->ADOQuery1->Active = false;
+		Form2->ADOQuery1->Active = true;
+		StatusBar1->Panels->Items[0]->Text = "Специальность успешно удалена";
+	} else{}
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TForm4::N3Click(TObject *Sender)
+{
+    Close();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm4::N2Click(TObject *Sender)
+{
+    ADOQuery1->SQL->Text = "INSERT INTO specialty VALUES ('" +Edit1->Text+ "', '"+DBLookupComboBox1->KeyValue+"', '" +ComboBox1->Text+ "', '" +CheckBox1->Checked+ "', '" +CheckBox2->Checked+ "')" ;
+	ADOQuery1->ExecSQL();
+	ADOQuery1->SQL->Text = "USE FosterComission SELECT [specialty], [facultet].[facultet], [specialty].[Id_facultet], [Qualification], [Full-time], [Extramural] FROM specialty JOIN facultet ON specialty.Id_facultet = facultet.Id_facultet";
+	ADOQuery1->Active = true;
+	Edit1->Text = "";
+	CheckBox1->Checked = 0;
+	CheckBox2->Checked = 0;
+    Form2->ADOQuery1->Active = false;
+	Form2->ADOQuery1->Active = true;
+	StatusBar1->Panels->Items[0]->Text = "Специальность успешно добавлена";
+}
+//---------------------------------------------------------------------------
+

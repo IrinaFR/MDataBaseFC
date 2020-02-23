@@ -2,7 +2,7 @@ object Form2: TForm2
   Left = 0
   Top = 0
   Caption = #1044#1086#1073#1072#1074#1083#1077#1085#1080#1077' '#1072#1073#1080#1090#1091#1088#1080#1077#1085#1090#1072
-  ClientHeight = 495
+  ClientHeight = 509
   ClientWidth = 585
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -16,7 +16,7 @@ object Form2: TForm2
   TextHeight = 13
   object Label1: TLabel
     Left = 24
-    Top = 16
+    Top = 8
     Width = 52
     Height = 14
     Caption = #1060#1072#1084#1080#1083#1080#1103
@@ -29,7 +29,7 @@ object Form2: TForm2
   end
   object Label2: TLabel
     Left = 169
-    Top = 16
+    Top = 8
     Width = 23
     Height = 14
     Caption = #1048#1084#1103
@@ -42,7 +42,7 @@ object Form2: TForm2
   end
   object Label3: TLabel
     Left = 313
-    Top = 16
+    Top = 8
     Width = 54
     Height = 14
     Caption = #1054#1090#1095#1077#1089#1090#1074#1086
@@ -55,7 +55,7 @@ object Form2: TForm2
   end
   object Label4: TLabel
     Left = 24
-    Top = 64
+    Top = 56
     Width = 89
     Height = 14
     Caption = #1044#1072#1090#1072' '#1088#1086#1078#1076#1077#1085#1080#1103
@@ -171,8 +171,8 @@ object Form2: TForm2
     ParentFont = False
   end
   object Label13: TLabel
-    Left = 24
-    Top = 360
+    Left = 25
+    Top = 369
     Width = 67
     Height = 14
     Caption = #1052#1072#1090#1077#1084#1072#1090#1080#1082#1072
@@ -184,8 +184,8 @@ object Form2: TForm2
     ParentFont = False
   end
   object Label14: TLabel
-    Left = 134
-    Top = 360
+    Left = 135
+    Top = 369
     Width = 75
     Height = 14
     Caption = #1056#1091#1089#1089#1082#1080#1081' '#1103#1079#1099#1082
@@ -197,8 +197,8 @@ object Form2: TForm2
     ParentFont = False
   end
   object Label15: TLabel
-    Left = 263
-    Top = 360
+    Left = 264
+    Top = 369
     Width = 74
     Height = 14
     Caption = #1055#1088#1086#1092#1080#1083#1100#1085#1099#1081
@@ -210,8 +210,8 @@ object Form2: TForm2
     ParentFont = False
   end
   object Label16: TLabel
-    Left = 24
-    Top = 392
+    Left = 25
+    Top = 410
     Width = 173
     Height = 14
     Caption = #1044#1086#1087#1086#1083#1085#1080#1090#1077#1083#1100#1085#1072#1103' '#1080#1085#1092#1086#1088#1084#1072#1094#1080#1103
@@ -227,14 +227,19 @@ object Form2: TForm2
     Top = 119
     Width = 569
     Height = 105
-    TabOrder = 5
+    TabOrder = 17
+    object Label17: TLabel
+      Left = 17
+      Top = 75
+      Width = 37
+      Height = 13
+      Caption = 'Label17'
+    end
     object DBLookupComboBox1: TDBLookupComboBox
       Left = 161
       Top = 28
       Width = 393
       Height = 21
-      DataField = 'Id_facultet'
-      DataSource = DataSource3
       KeyField = 'Id_facultet'
       ListField = 'facultet'
       ListSource = DataSource1
@@ -252,58 +257,89 @@ object Form2: TForm2
       ListField = 'specialty'
       ListSource = DataSource2
       TabOrder = 1
+      OnClick = DBLookupComboBox2Click
     end
-    object DBComboBox1: TDBComboBox
+    object ComboBox1: TComboBox
       Left = 16
       Top = 28
       Width = 121
       Height = 21
-      DataField = 'FormLearning'
-      DataSource = DataSource3
+      TabOrder = 2
       Items.Strings = (
         #1054#1095#1085#1072#1103
         #1047#1072#1086#1095#1085#1072#1103
         #1054#1095#1085#1086'-'#1079#1072#1086#1095#1085#1072#1103)
+    end
+  end
+  object Panel3: TPanel
+    Left = 8
+    Top = 230
+    Width = 569
+    Height = 84
+    TabOrder = 7
+    object CheckBox1: TCheckBox
+      Left = 16
+      Top = 28
+      Width = 97
+      Height = 17
+      Caption = #1047#1072#1103#1074#1083#1077#1085#1080#1077
+      Checked = True
+      State = cbChecked
+      TabOrder = 0
+    end
+    object Edit4: TEdit
+      Left = 329
+      Top = 55
+      Width = 24
+      Height = 21
+      TabOrder = 1
+    end
+    object Edit5: TEdit
+      Left = 432
+      Top = 55
+      Width = 24
+      Height = 21
       TabOrder = 2
+    end
+    object Edit6: TEdit
+      Left = 530
+      Top = 57
+      Width = 24
+      Height = 21
+      TabOrder = 3
     end
   end
   object Panel1: TPanel
     Left = 8
-    Top = 16
+    Top = 8
     Width = 569
     Height = 105
     TabOrder = 4
-    object DBEdit1: TDBEdit
-      Left = 16
+    object Edit1: TEdit
+      Left = 17
       Top = 20
       Width = 121
       Height = 21
-      DataField = 'Surname'
-      DataSource = DataSource3
       TabOrder = 0
     end
-    object DBEdit2: TDBEdit
+    object Edit2: TEdit
       Left = 161
       Top = 20
       Width = 121
       Height = 21
-      DataField = 'Name'
-      DataSource = DataSource3
       TabOrder = 1
     end
-    object DBEdit3: TDBEdit
+    object Edit3: TEdit
       Left = 305
       Top = 20
       Width = 121
       Height = 21
-      DataField = 'Patronymic'
-      DataSource = DataSource3
       TabOrder = 2
     end
   end
   object BitBtn1: TBitBtn
-    Left = 428
-    Top = 411
+    Left = 431
+    Top = 431
     Width = 137
     Height = 30
     Cursor = crHandPoint
@@ -312,8 +348,8 @@ object Form2: TForm2
     TabOrder = 0
   end
   object BitBtn2: TBitBtn
-    Left = 490
-    Top = 447
+    Left = 493
+    Top = 466
     Width = 75
     Height = 30
     Cursor = crHandPoint
@@ -323,7 +359,7 @@ object Form2: TForm2
   end
   object BitBtn4: TBitBtn
     Left = 347
-    Top = 411
+    Top = 431
     Width = 75
     Height = 30
     Cursor = crHandPoint
@@ -333,180 +369,102 @@ object Form2: TForm2
     OnClick = BitBtn4Click
   end
   object Memo1: TMemo
-    Left = 24
-    Top = 412
+    Left = 25
+    Top = 431
     Width = 281
     Height = 65
     Cursor = crIBeam
     Ctl3D = True
-    Lines.Strings = (
-      '')
     ParentCtl3D = False
     TabOrder = 3
   end
   object DateTimePicker2: TDateTimePicker
     Left = 24
-    Top = 84
+    Top = 76
     Width = 186
     Height = 21
     Date = 43877.000000000000000000
     Time = 0.912969155091559500
-    TabOrder = 6
-  end
-  object DBComboBox2: TDBComboBox
-    Left = 24
-    Top = 194
-    Width = 121
-    Height = 21
-    DataField = 'Qualification'
-    DataSource = DataSource3
-    Items.Strings = (
-      #1041#1072#1082#1072#1083#1072#1074#1088#1080#1072#1090
-      #1052#1072#1075#1080#1089#1090#1088#1072#1090#1091#1088#1072
-      #1057#1087#1077#1094#1080#1072#1083#1080#1090#1077#1090
-      #1040#1089#1087#1080#1088#1072#1085#1090#1091#1088#1072)
-    TabOrder = 7
-  end
-  object DBCheckBox4: TDBCheckBox
-    Left = 278
-    Top = 258
-    Width = 115
-    Height = 17
-    Caption = #1044#1080#1087#1083#1086#1084'\'#1072#1090#1090#1077#1089#1090#1072#1090
-    DataField = 'Diplom\sertificate'
-    DataSource = DataSource3
-    TabOrder = 8
-  end
-  object DBEdit6: TDBEdit
-    Left = 538
-    Top = 288
-    Width = 24
-    Height = 21
-    DataField = 'QtyThree'
-    DataSource = DataSource3
-    TabOrder = 9
-  end
-  object DBCheckBox6: TDBCheckBox
-    Left = 24
-    Top = 330
-    Width = 153
-    Height = 17
-    Caption = #1042#1089#1090#1091#1087#1080#1090#1077#1083#1100#1085#1099#1077' '#1101#1082#1079#1072#1084#1077#1085#1099
-    DataField = 'EntryExams'
-    DataSource = DataSource3
-    TabOrder = 10
-  end
-  object DBCheckBox7: TDBCheckBox
-    Left = 206
-    Top = 335
-    Width = 49
-    Height = 17
-    Caption = #1045#1043#1069
-    DataField = 'USE'
-    DataSource = DataSource3
-    TabOrder = 11
-  end
-  object DBEdit7: TDBEdit
-    Left = 98
-    Top = 358
-    Width = 24
-    Height = 21
-    DataField = 'Mathematics'
-    DataSource = DataSource3
-    TabOrder = 12
-  end
-  object DBEdit8: TDBEdit
-    Left = 215
-    Top = 358
-    Width = 24
-    Height = 21
-    DataField = 'RussianLanguage'
-    DataSource = DataSource3
-    TabOrder = 13
+    TabOrder = 5
   end
   object DBLookupComboBox3: TDBLookupComboBox
-    Left = 346
-    Top = 358
+    Left = 347
+    Top = 367
     Width = 145
     Height = 21
     KeyField = 'Id_subject'
     ListField = 'Name'
     ListSource = DataSource4
-    TabOrder = 14
+    TabOrder = 6
   end
-  object DBEdit9: TDBEdit
-    Left = 508
-    Top = 358
+  object CheckBox2: TCheckBox
+    Left = 140
+    Top = 258
+    Width = 97
+    Height = 17
+    Caption = #1055#1072#1089#1087#1086#1088#1090
+    TabOrder = 8
+  end
+  object CheckBox3: TCheckBox
+    Left = 243
+    Top = 258
+    Width = 47
+    Height = 17
+    Caption = #1060#1086#1090#1086
+    TabOrder = 9
+  end
+  object CheckBox4: TCheckBox
+    Left = 24
+    Top = 281
+    Width = 123
+    Height = 17
+    Caption = #1044#1080#1087#1083#1086#1084'/'#1072#1090#1090#1077#1089#1090#1072#1090
+    TabOrder = 10
+  end
+  object Edit7: TEdit
+    Left = 98
+    Top = 367
     Width = 24
     Height = 21
-    DataField = 'BallsProfile'
-    DataSource = DataSource3
+    TabOrder = 11
+  end
+  object Edit8: TEdit
+    Left = 216
+    Top = 367
+    Width = 24
+    Height = 21
+    TabOrder = 12
+  end
+  object Edit9: TEdit
+    Left = 508
+    Top = 367
+    Width = 24
+    Height = 21
+    TabOrder = 13
+  end
+  object CheckBox5: TCheckBox
+    Left = 25
+    Top = 330
+    Width = 123
+    Height = 17
+    Caption = #1053#1091#1078#1085#1086' '#1086#1073#1097#1077#1078#1080#1090#1080#1077
+    TabOrder = 14
+  end
+  object CheckBox6: TCheckBox
+    Left = 181
+    Top = 330
+    Width = 157
+    Height = 17
+    Caption = #1042#1089#1090#1091#1087#1080#1090#1077#1083#1100#1085#1099#1077' '#1101#1082#1079#1072#1084#1077#1085#1099
     TabOrder = 15
   end
-  object Panel3: TPanel
-    Left = 8
-    Top = 230
-    Width = 569
-    Height = 84
+  object CheckBox7: TCheckBox
+    Left = 376
+    Top = 330
+    Width = 46
+    Height = 17
+    Caption = #1045#1043#1069
     TabOrder = 16
-    object DBCheckBox1: TDBCheckBox
-      Left = 16
-      Top = 28
-      Width = 97
-      Height = 17
-      Caption = #1047#1072#1103#1074#1083#1077#1085#1080#1077
-      DataField = 'Statement'
-      DataSource = DataSource3
-      TabOrder = 0
-    end
-    object DBCheckBox2: TDBCheckBox
-      Left = 105
-      Top = 28
-      Width = 89
-      Height = 17
-      Caption = #1055#1072#1089#1087#1086#1088#1090
-      DataField = 'Passport'
-      DataSource = DataSource3
-      TabOrder = 1
-    end
-    object DBCheckBox3: TDBCheckBox
-      Left = 200
-      Top = 28
-      Width = 97
-      Height = 17
-      Caption = #1060#1086#1090#1086
-      DataField = 'Photo'
-      DataSource = DataSource3
-      TabOrder = 2
-    end
-    object DBCheckBox5: TDBCheckBox
-      Left = 16
-      Top = 60
-      Width = 153
-      Height = 17
-      Caption = #1050#1088#1072#1089#1085#1099#1081' '#1076#1080#1087#1083#1086#1084'\'#1072#1090#1090#1077#1089#1090#1072#1090
-      DataField = 'RedDiplom\sertificate'
-      DataSource = DataSource3
-      TabOrder = 3
-    end
-    object DBEdit4: TDBEdit
-      Left = 329
-      Top = 58
-      Width = 24
-      Height = 21
-      DataField = 'QtyFive'
-      DataSource = DataSource3
-      TabOrder = 4
-    end
-    object DBEdit5: TDBEdit
-      Left = 432
-      Top = 58
-      Width = 24
-      Height = 21
-      DataField = 'QtyFour'
-      DataSource = DataSource3
-      TabOrder = 5
-    end
   end
   object MainMenu1: TMainMenu
     Left = 536
@@ -556,38 +514,45 @@ object Form2: TForm2
     Top = 175
   end
   object DataSource3: TDataSource
-    DataSet = ADOTable1
-    Left = 64
-  end
-  object ADOTable1: TADOTable
-    Active = True
-    Connection = Form1.ADOConnection1
-    CursorType = ctStatic
-    TableName = 'abiturient'
-    Left = 128
+    DataSet = ADOQuery2
+    Left = 456
+    Top = 56
   end
   object DataSource4: TDataSource
     DataSet = ADOTable3
-    Left = 472
-    Top = 320
+    Left = 473
+    Top = 353
   end
   object ADOTable3: TADOTable
     Active = True
     Connection = Form1.ADOConnection1
     CursorType = ctStatic
     TableName = 'Subject'
-    Left = 408
-    Top = 320
+    Left = 409
+    Top = 353
   end
-  object ADOConnection1: TADOConnection
-    Connected = True
-    ConnectionString = 
-      'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security In' +
-      'fo=False;Initial Catalog=FosterComission;Data Source=user\sqlexp' +
-      'ress'
-    LoginPrompt = False
-    Provider = 'SQLOLEDB.1'
-    Left = 480
-    Top = 8
+  object ADOQuery2: TADOQuery
+    Active = True
+    Connection = Form1.ADOConnection1
+    CursorType = ctStatic
+    LockType = ltBatchOptimistic
+    Parameters = <>
+    SQL.Strings = (
+      'USE FosterComission'
+      'SELECT * FROM abiturient')
+    Left = 520
+    Top = 56
+  end
+  object ADOQuery3: TADOQuery
+    Active = True
+    Connection = Form1.ADOConnection1
+    CursorType = ctStatic
+    LockType = ltBatchOptimistic
+    Parameters = <>
+    SQL.Strings = (
+      'USE FosterComission'
+      'SELECT * FROM abiturient')
+    Left = 416
+    Top = 464
   end
 end

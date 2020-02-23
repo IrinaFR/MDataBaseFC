@@ -171,6 +171,17 @@ object Form1: TForm1
     NumGlyphs = 2
     ParentFont = False
     TabOrder = 5
+    OnClick = BitBtn4Click
+  end
+  object DBEdit1: TDBEdit
+    Left = 360
+    Top = 184
+    Width = 121
+    Height = 21
+    DataField = 'Surname'
+    DataSource = DataSource1
+    TabOrder = 6
+    Visible = False
   end
   object ADOConnection1: TADOConnection
     Connected = True
@@ -227,17 +238,22 @@ object Form1: TForm1
       end
     end
     object N4: TMenuItem
-      Caption = #1041#1072#1079#1072
+      Caption = #1053#1072#1089#1090#1088#1086#1081#1082#1080
       object N5: TMenuItem
         Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1092#1072#1082#1091#1083#1100#1090#1077#1090
         OnClick = N5Click
       end
       object N6: TMenuItem
         Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1089#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1100
+        OnClick = N6Click
       end
       object N7: TMenuItem
         Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1087#1088#1086#1092#1080#1083#1100#1085#1099#1081' '#1087#1088#1077#1076#1084#1077#1090
+        OnClick = N7Click
       end
+    end
+    object N8: TMenuItem
+      Caption = #1054' '#1087#1088#1086#1075#1088#1072#1084#1084#1077
     end
   end
 end

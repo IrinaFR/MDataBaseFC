@@ -36,18 +36,20 @@ __published:	// IDE-managed Components
 	TDataSource *DataSource2;
 	TLabel *Label3;
 	TBitBtn *BitBtn1;
-	TBitBtn *BitBtn2;
-	TBitBtn *BitBtn3;
 	TBitBtn *BitBtn4;
 	TBitBtn *BitBtn5;
-	TDBEdit *DBEdit1;
-	TDBComboBox *DBComboBox1;
-	TDBCheckBox *DBCheckBox1;
-	TDBCheckBox *DBCheckBox2;
-	TLabel *Label4;
 	TStatusBar *StatusBar1;
 	TADOQuery *ADOQuery2;
+	TDBEdit *DBEdit1;
+	TEdit *Edit1;
+	TComboBox *ComboBox1;
+	TCheckBox *CheckBox1;
+	TCheckBox *CheckBox2;
 	void __fastcall BitBtn4Click(TObject *Sender);
+	void __fastcall BitBtn1Click(TObject *Sender);
+	void __fastcall BitBtn5Click(TObject *Sender);
+	void __fastcall N3Click(TObject *Sender);
+	void __fastcall N2Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm4(TComponent* Owner);

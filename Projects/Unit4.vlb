@@ -40,12 +40,6 @@ Coordinates=98,446,88,36
 [Label1]
 Coordinates=259,210,53,58
 
-[BitBtn3]
-Coordinates=372,10,56,58
-
-[BitBtn2]
-Coordinates=550,210,56,58
-
 [DBLookupComboBox1]
 Coordinates=10,278,144,36
 
@@ -59,6 +53,6 @@ Coordinates=187,446,40,36
 Coordinates=193,210,56,58
 
 []
-Coordinates=215,10,81,102
+Coordinates=550,210,56,58
 Visible=True
 
