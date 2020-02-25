@@ -228,12 +228,13 @@ object Form2: TForm2
     Width = 569
     Height = 105
     TabOrder = 17
-    object Label17: TLabel
+    object DBText1: TDBText
       Left = 17
-      Top = 75
-      Width = 37
-      Height = 13
-      Caption = 'Label17'
+      Top = 78
+      Width = 112
+      Height = 17
+      DataField = 'Qualification'
+      DataSource = DataSource5
     end
     object DBLookupComboBox1: TDBLookupComboBox
       Left = 161
@@ -336,6 +337,15 @@ object Form2: TForm2
       Height = 21
       TabOrder = 2
     end
+    object DBEdit1: TDBEdit
+      Left = 232
+      Top = 48
+      Width = 121
+      Height = 21
+      DataField = 'Name'
+      DataSource = DataSource3
+      TabOrder = 3
+    end
   end
   object BitBtn1: TBitBtn
     Left = 431
@@ -346,6 +356,7 @@ object Form2: TForm2
     Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1080' '#1089#1082#1086#1087#1080#1088#1086#1074#1072#1090#1100
     DragCursor = crHandPoint
     TabOrder = 0
+    OnClick = BitBtn1Click
   end
   object BitBtn2: TBitBtn
     Left = 493
@@ -356,6 +367,7 @@ object Form2: TForm2
     Caption = #1054#1090#1084#1077#1085#1072
     DragCursor = crHandPoint
     TabOrder = 1
+    OnClick = BitBtn2Click
   end
   object BitBtn4: TBitBtn
     Left = 347
@@ -471,16 +483,20 @@ object Form2: TForm2
     object N1: TMenuItem
       Caption = #1060#1072#1081#1083
       object N3: TMenuItem
-        Caption = #1054#1090#1084#1077#1085#1080#1090#1100' '#1076#1086#1073#1072#1074#1083#1077#1085#1080#1077
+        Caption = #1047#1072#1082#1088#1099#1090#1100' '#1086#1082#1085#1086
+        OnClick = N3Click
       end
       object N4: TMenuItem
         Caption = #1044#1086#1073#1072#1074#1080#1090#1100
+        OnClick = N4Click
       end
       object N6: TMenuItem
         Caption = #1044#1086#1073#1072#1074#1080#1090#1100' '#1080' '#1089#1082#1086#1087#1080#1088#1086#1074#1072#1090#1100
+        OnClick = N6Click
       end
       object N5: TMenuItem
         Caption = #1054#1095#1080#1089#1090#1080#1090#1100' '#1074#1089#1077' '#1087#1086#1083#1103
+        OnClick = N5Click
       end
     end
     object N2: TMenuItem
@@ -510,6 +526,8 @@ object Form2: TForm2
     CursorType = ctStatic
     LockType = ltBatchOptimistic
     Parameters = <>
+    SQL.Strings = (
+      'SELECT *  FROM specialty')
     Left = 424
     Top = 175
   end
@@ -554,5 +572,21 @@ object Form2: TForm2
       'SELECT * FROM abiturient')
     Left = 416
     Top = 464
+  end
+  object DataSource5: TDataSource
+    DataSet = ADOQuery4
+    Left = 32
+    Top = 222
+  end
+  object ADOQuery4: TADOQuery
+    Active = True
+    Connection = Form1.ADOConnection1
+    CursorType = ctStatic
+    LockType = ltBatchOptimistic
+    Parameters = <>
+    SQL.Strings = (
+      'USE FosterComission SELECT Qualification FROM specialty ')
+    Left = 104
+    Top = 214
   end
 end

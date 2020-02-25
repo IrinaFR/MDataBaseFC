@@ -18,6 +18,8 @@
 #include <Vcl.DBCtrls.hpp>
 #include <Vcl.Mask.hpp>
 //---------------------------------------------------------------------------
+//Функция очистки полей
+
 class TForm2 : public TForm
 {
 __published:	// IDE-managed Components
@@ -78,17 +80,94 @@ __published:	// IDE-managed Components
 	TCheckBox *CheckBox7;
 	TADOQuery *ADOQuery3;
 	TPanel *Panel2;
-	TLabel *Label17;
 	TDBLookupComboBox *DBLookupComboBox1;
 	TDBLookupComboBox *DBLookupComboBox2;
 	TComboBox *ComboBox1;
+	TDataSource *DataSource5;
+	TADOQuery *ADOQuery4;
+	TDBText *DBText1;
+	TDBEdit *DBEdit1;
 	void __fastcall DBLookupComboBox1Click(TObject *Sender);
 	void __fastcall BitBtn4Click(TObject *Sender);
 	void __fastcall DBLookupComboBox2Click(TObject *Sender);
+	void __fastcall BitBtn2Click(TObject *Sender);
+	void __fastcall N3Click(TObject *Sender);
+	void __fastcall N4Click(TObject *Sender);
+	void __fastcall N5Click(TObject *Sender);
+	void __fastcall BitBtn1Click(TObject *Sender);
+	void __fastcall N6Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm2(TComponent* Owner);
+
+	//Функция очистки полей а Form 2
+void deleteValue() {
+	Edit1->Text = "";
+	Edit2->Text = "";
+	Edit3->Text = "";
+	ComboBox1->Text = "";
+	CheckBox1->Checked = 0;
+	CheckBox2->Checked = 0;
+	CheckBox3->Checked = 0;
+	CheckBox4->Checked = 0;
+	Edit4->Text = "";
+	Edit5->Text = "";
+	Edit6->Text = "";
+	CheckBox5->Checked = 0;
+	CheckBox6->Checked = 0;
+	CheckBox7->Checked = 0;
+	Edit7->Text = "";
+	Edit8->Text = "";
+	Edit9->Text = "";
+	Memo1->Lines->Text = "";
+}
+	String Check1;
+	String Check2;
+	String Check3;
+	String Check4;
+	String Check5;
+	String Check6;
+	String Check7;
+	//функция изменения true/false в CheckBox на да/нет
+	void valueCheckBox() {
+		if(CheckBox1->Checked == 1){
+			Check1 = "Да";
+		} else{
+			Check1 = "Нет";
+		}
+		if(CheckBox2->Checked == 1){
+			Check2 = "Да";
+		} else{
+			Check2 = "Нет";
+		}
+		if(CheckBox3->Checked == 1){
+			Check3 = "Да";
+		} else{
+			Check3 = "Нет";
+		}
+		if(CheckBox4->Checked == 1){
+			Check4 = "Да";
+		} else{
+			Check4 = "Нет";
+		}
+		if(CheckBox5->Checked == 1){
+			Check5 = "Да";
+		} else{
+			Check5 = "Нет";
+		}
+		if(CheckBox6->Checked == 1){
+			Check6 = "Да";
+		} else{
+			Check6 = "Нет";
+		}
+		if(CheckBox7->Checked == 1){
+			Check7 = "Да";
+		} else{
+			Check7 = "Нет";
+		}
+	};
 };
+
 //---------------------------------------------------------------------------
 extern PACKAGE TForm2 *Form2;
 //---------------------------------------------------------------------------

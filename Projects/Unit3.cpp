@@ -17,6 +17,7 @@ __fastcall TForm3::TForm3(TComponent* Owner)
 //---------------------------------------------------------------------------
 void __fastcall TForm3::BitBtn1Click(TObject *Sender)
 {
+    //Кнопка добавить
 	if(Edit1->Text == ""){
 		ShowMessage("Вы не заполнили поле");
 	} else{
@@ -33,20 +34,21 @@ void __fastcall TForm3::BitBtn1Click(TObject *Sender)
 
 void __fastcall TForm3::BitBtn3Click(TObject *Sender)
 {
-if(mrOk==MessageDlg("Вы точно хотите удалить факультет("+DBEdit1->Text+")?", mtConfirmation,  TMsgDlgButtons() <<mbOK<<mbCancel , 0)) {
-	ADOQuery1->SQL->Text = "DELETE facultet WHERE facultet = ('" +DBEdit1->Text+ "')";
-	ADOQuery1->ExecSQL();
-	ADOQuery1->SQL->Text = "USE FosterComission Select * FROM facultet";
-	ADOQuery1->Active = true;
-    Form2->ADOTable2->Active = false;
-	Form2->ADOTable2->Active = true;
-} else{
- }
+	//кнопка удалить
+	if(mrOk==MessageDlg("Вы точно хотите удалить факультет("+DBEdit1->Text+")?", mtConfirmation,  TMsgDlgButtons() <<mbOK<<mbCancel , 0)) {
+		ADOQuery1->SQL->Text = "DELETE facultet WHERE facultet = ('" +DBEdit1->Text+ "')";
+		ADOQuery1->ExecSQL();
+		ADOQuery1->SQL->Text = "USE FosterComission Select * FROM facultet";
+		ADOQuery1->Active = true;
+		Form2->ADOTable2->Active = false;
+		Form2->ADOTable2->Active = true;
+	} else{}
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm3::N2Click(TObject *Sender)
 {
+    //Добавление через файл\добавить
 	if(Edit1->Text == ""){
 		ShowMessage("Вы не заполнили поле");
 	} else{
@@ -63,13 +65,17 @@ void __fastcall TForm3::N2Click(TObject *Sender)
 
 void __fastcall TForm3::N3Click(TObject *Sender)
 {
+	//Файл\закрыть
+	Edit1->Text = "";
 	Close();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm3::BitBtn4Click(TObject *Sender)
 {
-    Close();
+    //кнопка закрыть
+	Edit1->Text = "";
+	Close();
 }
 //---------------------------------------------------------------------------
 

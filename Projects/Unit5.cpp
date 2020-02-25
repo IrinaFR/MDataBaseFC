@@ -18,22 +18,27 @@ __fastcall TForm5::TForm5(TComponent* Owner)
 //---------------------------------------------------------------------------
 void __fastcall TForm5::BitBtn1Click(TObject *Sender)
 {
-	ADOQuery1->SQL->Text = "INSERT INTO Subject VALUES ('" +Edit1->Text+ "', '" +Edit2->Text+ "')" ;
-	ADOQuery1->ExecSQL();
-	ADOQuery1->SQL->Text = "USE FosterComission SELECT [Id_subject], [Name], [PassingScore] FROM Subject";
-	ADOQuery1->Active = true;
-	Edit1->Text = "";
-	Edit2->Text = "";
-    Form2->ADOTable3->Active = false;
-	Form2->ADOTable3->Active = true;
-
+    //кнопка добавить
+	if(Edit1->Text == "" || Edit2->Text == ""){
+		ShowMessage("Вы заполнили не все поля");
+	}else {
+		ADOQuery1->SQL->Text = "INSERT INTO Subject VALUES ('" +Edit1->Text+ "', '" +Edit2->Text+ "')" ;
+		ADOQuery1->ExecSQL();
+		ADOQuery1->SQL->Text = "USE FosterComission SELECT [Id_subject], [Name], [PassingScore] FROM Subject";
+		ADOQuery1->Active = true;
+		Edit1->Text = "";
+		Edit2->Text = "";
+		Form2->ADOTable3->Active = false;
+		Form2->ADOTable3->Active = true;
+	}
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm5::BitBtn2Click(TObject *Sender)
 {
-if (DBEdit1->Text == "") {
-	ShowMessage("Удалять нечего");
-} else if(mrOk==MessageDlg("Вы точно хотите удалить ("+DBEdit1->Text+")?", mtConfirmation,  TMsgDlgButtons() <<mbOK<<mbCancel , 0)) {
+	//Кнопка удалить
+	if (DBEdit1->Text == "") {
+		ShowMessage("Удалять нечего");
+	} else if(mrOk == MessageDlg("Вы точно хотите удалить ("+DBEdit1->Text+")?", mtConfirmation,  TMsgDlgButtons() <<mbOK<<mbCancel , 0)) {
 		ADOQuery1->SQL->Text = "DELETE Subject WHERE Name = ('" +DBEdit1->Text+ "')";
 		ADOQuery1->ExecSQL();
 		ADOQuery1->SQL->Text = "USE FosterComission SELECT [Id_subject], [Name], [PassingScore] FROM Subject";
@@ -41,22 +46,28 @@ if (DBEdit1->Text == "") {
 		Form2->ADOTable3->Active = false;
 		Form2->ADOTable3->Active = true;
 		ShowMessage("Запись удалена");
-} else{
- }
+	} else{}
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm5::BitBtn3Click(TObject *Sender)
 {
+	//кнопка закрыть
+	Edit1->Text = "";
+	Edit2->Text = "";
 	Close();
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm5::N3Click(TObject *Sender)
 {
+	//файл\закрыть
+	Edit1->Text = "";
+	Edit2->Text = "";
 	Close();
 }
 //---------------------------------------------------------------------------
 void __fastcall TForm5::N2Click(TObject *Sender)
 {
+    //файл\добавить
 	ADOQuery1->SQL->Text = "INSERT INTO Subject VALUES ('" +Edit1->Text+ "', '" +Edit2->Text+ "')" ;
 	ADOQuery1->ExecSQL();
 	ADOQuery1->SQL->Text = "USE FosterComission SELECT [Id_subject], [Name], [PassingScore] FROM Subject";

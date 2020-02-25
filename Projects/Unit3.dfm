@@ -109,7 +109,6 @@ object Form3: TForm3
     Width = 456
     Height = 19
     Panels = <>
-    ExplicitTop = 267
   end
   object Edit1: TEdit
     Left = 10
@@ -128,7 +127,7 @@ object Form3: TForm3
         OnClick = N2Click
       end
       object N3: TMenuItem
-        Caption = #1054#1090#1084#1077#1085#1080#1090#1100
+        Caption = #1047#1072#1082#1088#1099#1090#1100
         OnClick = N3Click
       end
     end

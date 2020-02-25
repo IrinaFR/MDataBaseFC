@@ -37,13 +37,6 @@ object Form1: TForm1
     Columns = <
       item
         Expanded = False
-        FieldName = 'Id_abiturient'
-        Title.Caption = #8470
-        Width = 40
-        Visible = True
-      end
-      item
-        Expanded = False
         FieldName = 'Surname'
         Title.Caption = #1060#1072#1084#1080#1083#1080#1103
         Width = 80
@@ -88,7 +81,7 @@ object Form1: TForm1
         Expanded = False
         FieldName = 'EntryExams'
         Title.Caption = #1042#1089#1090#1091#1087#1080#1090#1077#1083#1100#1085#1099#1077
-        Width = 40
+        Width = 80
         Visible = True
       end
       item
@@ -124,23 +117,8 @@ object Form1: TForm1
     TabOrder = 2
     OnClick = BitBtn1Click
   end
-  object BitBtn2: TBitBtn
-    Left = 8
-    Top = 178
-    Width = 101
-    Height = 33
-    Cursor = crHandPoint
-    Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -11
-    Font.Name = 'Tahoma'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 3
-  end
   object BitBtn3: TBitBtn
-    Left = 115
+    Left = 8
     Top = 178
     Width = 101
     Height = 33
@@ -152,11 +130,11 @@ object Form1: TForm1
     Font.Name = 'Tahoma'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 3
     OnClick = BitBtn3Click
   end
   object BitBtn4: TBitBtn
-    Left = 222
+    Left = 134
     Top = 178
     Width = 101
     Height = 33
@@ -170,17 +148,17 @@ object Form1: TForm1
     Kind = bkAbort
     NumGlyphs = 2
     ParentFont = False
-    TabOrder = 5
+    TabOrder = 4
     OnClick = BitBtn4Click
   end
   object DBEdit1: TDBEdit
-    Left = 360
-    Top = 184
+    Left = 361
+    Top = 167
     Width = 121
     Height = 21
-    DataField = 'Surname'
+    DataField = 'Id_abiturient'
     DataSource = DataSource1
-    TabOrder = 6
+    TabOrder = 5
     Visible = False
   end
   object ADOConnection1: TADOConnection
@@ -202,10 +180,11 @@ object Form1: TForm1
     CursorType = ctStatic
     Parameters = <>
     SQL.Strings = (
-      'SELECT [Id_abiturient]'
+      'SELECT TOP 50 [Id_abiturient]'
       '      ,[Surname]'
       '      ,[Name]'
       '      ,[Patronymic]'
+      '      ,[DateBorn]'
       '      ,[FormLearning]'
       '      ,[abiturient].[Qualification]'
       '      ,[specialty].[specialty]'
@@ -215,7 +194,8 @@ object Form1: TForm1
       '  FROM abiturient'
       
         ' JOIN specialty ON abiturient.Id_specialty = specialty.Id_specia' +
-        'lty')
+        'lty'
+      'ORDER BY Id_abiturient DESC')
     Left = 120
     Top = 96
   end
@@ -226,8 +206,7 @@ object Form1: TForm1
     Top = 96
   end
   object MainMenu1: TMainMenu
-    Left = 296
-    Top = 16
+    Left = 288
     object N1: TMenuItem
       Caption = #1060#1072#1081#1083
       object N2: TMenuItem
@@ -253,7 +232,13 @@ object Form1: TForm1
       end
     end
     object N8: TMenuItem
-      Caption = #1054' '#1087#1088#1086#1075#1088#1072#1084#1084#1077
+      Caption = #1054#1090#1095#1105#1090#1099
+      object N9: TMenuItem
+        Caption = #1054#1073#1097#1072#1103' '#1080#1085#1092#1086#1088#1084#1072#1094#1080#1103
+      end
+      object N10: TMenuItem
+        Caption = #1055#1086' '#1089#1090#1091#1076#1077#1085#1090#1091
+      end
     end
   end
 end

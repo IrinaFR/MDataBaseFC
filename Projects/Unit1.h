@@ -28,7 +28,6 @@ __published:	// IDE-managed Components
 	TSearchBox *SearchBox1;
 	TLabel *Label1;
 	TBitBtn *BitBtn1;
-	TBitBtn *BitBtn2;
 	TBitBtn *BitBtn3;
 	TBitBtn *BitBtn4;
 	TMainMenu *MainMenu1;
@@ -41,6 +40,8 @@ __published:	// IDE-managed Components
 	TMenuItem *N7;
 	TDBEdit *DBEdit1;
 	TMenuItem *N8;
+	TMenuItem *N9;
+	TMenuItem *N10;
 	void __fastcall BitBtn1Click(TObject *Sender);
 	void __fastcall BitBtn3Click(TObject *Sender);
 	void __fastcall SearchBox1Change(TObject *Sender);

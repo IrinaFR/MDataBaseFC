@@ -164,7 +164,6 @@ object Form4: TForm4
       item
         Width = 50
       end>
-    ExplicitTop = 363
   end
   object DBEdit1: TDBEdit
     Left = 552
