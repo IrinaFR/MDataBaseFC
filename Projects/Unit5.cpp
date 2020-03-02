@@ -6,6 +6,7 @@
 #include "Unit5.h"
 #include "Unit1.h"
 #include "Unit2.h"
+#include "Unit6.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -30,6 +31,10 @@ void __fastcall TForm5::BitBtn1Click(TObject *Sender)
 		Edit2->Text = "";
 		Form2->ADOTable3->Active = false;
 		Form2->ADOTable3->Active = true;
+		Form6->ADOQuery7->Active = false;
+		Form6->ADOQuery4->Active = false;
+		Form6->ADOQuery7->Active = true;
+		Form6->ADOQuery4->Active = true;
 	}
 }
 //---------------------------------------------------------------------------
@@ -46,6 +51,10 @@ void __fastcall TForm5::BitBtn2Click(TObject *Sender)
 		Form2->ADOTable3->Active = false;
 		Form2->ADOTable3->Active = true;
 		ShowMessage("Запись удалена");
+		Form6->ADOQuery7->Active = false;
+		Form6->ADOQuery4->Active = false;
+		Form6->ADOQuery7->Active = true;
+		Form6->ADOQuery4->Active = true;
 	} else{}
 }
 //---------------------------------------------------------------------------
@@ -76,6 +85,10 @@ void __fastcall TForm5::N2Click(TObject *Sender)
 	Edit2->Text = "";
 	Form2->ADOTable3->Active = false;
 	Form2->ADOTable3->Active = true;
+	Form6->ADOQuery7->Active = false;
+	Form6->ADOQuery4->Active = false;
+	Form6->ADOQuery7->Active = true;
+	Form6->ADOQuery4->Active = true;
 
 }
 //---------------------------------------------------------------------------

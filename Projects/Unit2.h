@@ -28,7 +28,6 @@ __published:	// IDE-managed Components
 	TLabel *Label3;
 	TMainMenu *MainMenu1;
 	TMenuItem *N1;
-	TMenuItem *N2;
 	TMenuItem *N3;
 	TMenuItem *N4;
 	TMenuItem *N5;
@@ -86,7 +85,6 @@ __published:	// IDE-managed Components
 	TDataSource *DataSource5;
 	TADOQuery *ADOQuery4;
 	TDBText *DBText1;
-	TDBEdit *DBEdit1;
 	void __fastcall DBLookupComboBox1Click(TObject *Sender);
 	void __fastcall BitBtn4Click(TObject *Sender);
 	void __fastcall DBLookupComboBox2Click(TObject *Sender);

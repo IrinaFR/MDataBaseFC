@@ -57,7 +57,7 @@ object Form4: TForm4
     Left = 0
     Top = 0
     Width = 657
-    Height = 120
+    Height = 130
     DataSource = DataSource1
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
@@ -222,9 +222,6 @@ object Form4: TForm4
         Caption = #1047#1072#1082#1088#1099#1090#1100
         OnClick = N3Click
       end
-    end
-    object N4: TMenuItem
-      Caption = #1054' '#1087#1088#1086#1075#1088#1072#1084#1084#1077
     end
   end
   object ADOConnection1: TADOConnection

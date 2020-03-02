@@ -26,7 +26,6 @@ __published:	// IDE-managed Components
 	TMenuItem *N1;
 	TMenuItem *N2;
 	TMenuItem *N3;
-	TMenuItem *N4;
 	TBitBtn *BitBtn1;
 	TBitBtn *BitBtn2;
 	TBitBtn *BitBtn3;

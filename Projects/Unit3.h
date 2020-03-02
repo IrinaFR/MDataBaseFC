@@ -25,7 +25,6 @@ __published:	// IDE-managed Components
 	TMenuItem *N1;
 	TMenuItem *N2;
 	TMenuItem *N3;
-	TMenuItem *N4;
 	TDBGrid *DBGrid1;
 	TADOConnection *ADOConnection1;
 	TADOQuery *ADOQuery1;

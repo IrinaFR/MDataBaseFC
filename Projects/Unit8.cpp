@@ -1,0 +1,76 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit8.h"
+#include "Unit1.h"
+#include "Unit7.h"
+#include "Unit2.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm8 *Form8;
+//---------------------------------------------------------------------------
+__fastcall TForm8::TForm8(TComponent* Owner)
+	: TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::DBLookupComboBox1Click(TObject *Sender)
+{
+	//сортировка специальности при изменении пол€ факультет
+	String valueFacultetEdit = DBLookupComboBox1->Text;
+	ADOQuery2->SQL->Text = "USE FosterComission SELECT * FROM specialty JOIN facultet ON specialty.Id_facultet = facultet.Id_facultet WHERE (facultet='" + valueFacultetEdit + "')";
+	ADOQuery2->Active = true;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::DBLookupComboBox2Click(TObject *Sender)
+{
+	//¬ывод квалификации в зависимости от выбора специальности
+	DBText1->DataSource = DataSource4;
+	String valueSpecialtyEdit = DBLookupComboBox2->Text;
+	ADOQuery4->SQL->Text = "USE FosterComission SELECT Qualification FROM specialty WHERE specialty = '" +valueSpecialtyEdit+ "'";
+	ADOQuery4->Active = true;
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm8::BitBtn1Click(TObject *Sender)
+{
+	ADOQuery5->SQL->Text = "UPDATE abiturient SET Surname='" +DBEdit1->Text+ "', Name='" +DBEdit2->Text+ "', Patronymic='" +DBEdit3->Text+ "', DateBorn='" +DBEdit11->Text+ "', FormLearning='" +DBComboBox8->Text+ "', Id_facultet='" +DBLookupComboBox1->KeyValue+ "', Qualification='" +DBText1->Caption+ "', Id_specialty='" +DBLookupComboBox2->KeyValue+ "', Statement='" +DBComboBox1->Text+ "', Passport='" +DBComboBox2->Text+ "', Photo='" +DBComboBox3->Text+ "', Diplom='" +DBComboBox4->Text+ "', QtyFive='" +DBEdit8->Text+ "', QtyFour='" +DBEdit9->Text+ "', QtyThree='" +DBEdit10->Text+ "', NeedHostel='" +DBComboBox5->Text+ "', EntryExams='" +DBComboBox6->Text+ "', [USE]='" +DBComboBox7->Text+ "', Mathematics='" +DBEdit4->Text+ "', RussianLanguage='" +DBEdit6->Text+ "', Id_subject='" +DBLookupComboBox3->KeyValue+ "', BallsProfile='" +DBEdit7->Text+ "', Info='" +DBMemo1->Lines->Text+ "' WHERE Id_abiturient = '" +DBEdit5->Text+ "'";
+	ADOQuery5->ExecSQL();
+	Form1->ADOQuery1->Active = false;
+	Form1->ADOQuery1->Active = true;
+	Form7->ADOQuery1->Active = false;
+	Form7->ADOQuery1->Active = true;
+	Form8->Close();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::BitBtn2Click(TObject *Sender)
+{
+    Close();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::N2Click(TObject *Sender)
+{
+    ADOQuery5->SQL->Text = "UPDATE abiturient SET Surname='" +DBEdit1->Text+ "', Name='" +DBEdit2->Text+ "', Patronymic='" +DBEdit3->Text+ "', DateBorn='" +DBEdit11->Text+ "', FormLearning='" +DBComboBox8->Text+ "', Id_facultet='" +DBLookupComboBox1->KeyValue+ "', Qualification='" +DBText1->Caption+ "', Id_specialty='" +DBLookupComboBox2->KeyValue+ "', Statement='" +DBComboBox1->Text+ "', Passport='" +DBComboBox2->Text+ "', Photo='" +DBComboBox3->Text+ "', Diplom='" +DBComboBox4->Text+ "', QtyFive='" +DBEdit8->Text+ "', QtyFour='" +DBEdit9->Text+ "', QtyThree='" +DBEdit10->Text+ "', NeedHostel='" +DBComboBox5->Text+ "', EntryExams='" +DBComboBox6->Text+ "', [USE]='" +DBComboBox7->Text+ "', Mathematics='" +DBEdit4->Text+ "', RussianLanguage='" +DBEdit6->Text+ "', Id_subject='" +DBLookupComboBox3->KeyValue+ "', BallsProfile='" +DBEdit7->Text+ "', Info='" +DBMemo1->Lines->Text+ "' WHERE Id_abiturient = '" +DBEdit5->Text+ "'";
+	ADOQuery5->ExecSQL();
+	Form1->ADOQuery1->Active = false;
+	Form1->ADOQuery1->Active = true;
+	Form7->ADOQuery1->Active = false;
+	Form7->ADOQuery1->Active = true;
+	Form8->Close();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm8::N3Click(TObject *Sender)
+{
+	Close();
+}
+//---------------------------------------------------------------------------
+

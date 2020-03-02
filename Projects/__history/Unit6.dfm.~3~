@@ -1,0 +1,692 @@
+object Form6: TForm6
+  Left = 0
+  Top = 0
+  Caption = #1054#1090#1095#1105#1090' 1'
+  ClientHeight = 310
+  ClientWidth = 535
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object frxPreview1: TfrxPreview
+    Left = 0
+    Top = 0
+    Width = 535
+    Height = 310
+    Align = alClient
+    OutlineVisible = True
+    OutlineWidth = 121
+    ThumbnailVisible = False
+    FindFmVisible = False
+    UseReportHints = True
+    HideScrolls = False
+  end
+  object frxReport1: TfrxReport
+    Version = '6.5.11'
+    DotMatrixReport = False
+    IniFile = '\Software\Fast Reports'
+    PreviewOptions.Buttons = [pbPrint, pbLoad, pbSave, pbExport, pbZoom, pbFind, pbOutline, pbPageSetup, pbTools, pbEdit, pbNavigator, pbExportQuick, pbCopy, pbSelection]
+    PreviewOptions.Zoom = 1.000000000000000000
+    PrintOptions.Printer = 'Default'
+    PrintOptions.PrintOnSheet = 0
+    ReportOptions.CreateDate = 43888.889348831000000000
+    ReportOptions.LastChange = 43889.523077997680000000
+    ScriptLanguage = 'PascalScript'
+    ScriptText.Strings = (
+      ''
+      'begin'
+      ''
+      'end.')
+    Left = 24
+    Top = 40
+    Datasets = <
+      item
+        DataSet = frxDBDataset1
+        DataSetName = 'frxDBDataset1'
+      end
+      item
+        DataSet = frxDBDataset2
+        DataSetName = 'frxDBDataset2'
+      end
+      item
+        DataSet = frxDBDataset3
+        DataSetName = 'frxDBDataset3'
+      end
+      item
+        DataSet = frxDBDataset4
+        DataSetName = 'frxDBDataset4'
+      end
+      item
+        DataSet = frxDBDataset5
+        DataSetName = 'frxDBDataset5'
+      end
+      item
+        DataSet = frxDBDataset6
+        DataSetName = 'frxDBDataset6'
+      end
+      item
+        DataSet = frxDBDataset7
+        DataSetName = 'frxDBDataset7'
+      end>
+    Variables = <>
+    Style = <>
+    object Data: TfrxDataPage
+      Height = 1000.000000000000000000
+      Width = 1000.000000000000000000
+    end
+    object Page1: TfrxReportPage
+      PaperWidth = 210.000000000000000000
+      PaperHeight = 297.000000000000000000
+      PaperSize = 9
+      LeftMargin = 10.000000000000000000
+      RightMargin = 10.000000000000000000
+      TopMargin = 10.000000000000000000
+      BottomMargin = 10.000000000000000000
+      Frame.Typ = []
+      MirrorMode = []
+      object ReportTitle1: TfrxReportTitle
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 158.740260000000000000
+        Top = 18.897650000000000000
+        Width = 718.110700000000000000
+        object Memo2: TfrxMemoView
+          AllowVectorExport = True
+          Left = 207.874150000000000000
+          Width = 351.496290000000000000
+          Height = 34.015770000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -27
+          Font.Name = 'times New Roman'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            #1054#1090#1095#1105#1090'. '#1054#1073#1097#1072#1103' '#1080#1085#1092#1086#1088#1084#1072#1094#1080#1103)
+          ParentFont = False
+        end
+        object Memo3: TfrxMemoView
+          AllowVectorExport = True
+          Left = 3.779530000000000000
+          Top = 60.472480000000000000
+          Width = 502.677490000000000000
+          Height = 18.897650000000000000
+          DataSet = frxDBDataset1
+          DataSetName = 'frxDBDataset1'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'times New Roman'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            #1042#1089#1077#1075#1086' '#1072#1073#1080#1090#1091#1088#1080#1077#1085#1090#1086#1074' '#1079#1072#1088#1077#1075#1080#1089#1090#1088#1080#1088#1086#1074#1072#1085#1086': [frxDBDataset1."COLUMN1"]')
+          ParentFont = False
+        end
+        object Memo4: TfrxMemoView
+          AllowVectorExport = True
+          Left = 3.779530000000000000
+          Top = 83.149660000000000000
+          Width = 442.205010000000000000
+          Height = 18.897650000000000000
+          DataSet = frxDBDataset2
+          DataSetName = 'frxDBDataset2'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'times New Roman'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            #1042#1089#1077#1075#1086' '#1092#1072#1082#1091#1083#1100#1090#1077#1090#1086#1074': [frxDBDataset2."COLUMN1"]')
+          ParentFont = False
+        end
+        object Memo5: TfrxMemoView
+          AllowVectorExport = True
+          Left = 3.779530000000000000
+          Top = 105.826840000000000000
+          Width = 442.205010000000000000
+          Height = 18.897650000000000000
+          DataSet = frxDBDataset3
+          DataSetName = 'frxDBDataset3'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'times New Roman'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            #1042#1089#1077#1075#1086' '#1089#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1077#1081': [frxDBDataset3."COLUMN1"]')
+          ParentFont = False
+        end
+        object Memo6: TfrxMemoView
+          AllowVectorExport = True
+          Left = 3.779530000000000000
+          Top = 128.504020000000000000
+          Width = 442.205010000000000000
+          Height = 18.897650000000000000
+          DataSet = frxDBDataset4
+          DataSetName = 'frxDBDataset4'
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -16
+          Font.Name = 'times New Roman'
+          Font.Style = []
+          Frame.Typ = []
+          Memo.UTF8W = (
+            #1042#1089#1077#1075#1086' '#1087#1088#1086#1092#1080#1083#1100#1085#1099#1093' '#1087#1088#1077#1076#1084#1077#1090#1086#1074': [frxDBDataset4."COLUMN1"]')
+          ParentFont = False
+        end
+      end
+      object PageFooter1: TfrxPageFooter
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 22.677180000000000000
+        Top = 593.386210000000000000
+        Width = 718.110700000000000000
+        object Memo1: TfrxMemoView
+          AllowVectorExport = True
+          Left = 642.520100000000000000
+          Width = 75.590600000000000000
+          Height = 18.897650000000000000
+          Frame.Typ = []
+          HAlign = haRight
+          Memo.UTF8W = (
+            '[Page#]')
+        end
+      end
+      object MasterData1: TfrxMasterData
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 22.677180000000000000
+        Top = 283.464750000000000000
+        Width = 718.110700000000000000
+        DataSet = frxDBDataset5
+        DataSetName = 'frxDBDataset5'
+        RowCount = 0
+        object TableObject1: TfrxTableObject
+          AllowVectorExport = True
+          Left = 3.779530000000000000
+          object TableColumn1: TfrxTableColumn
+            Width = 700.504020000000000000
+            MaxWidth = 75.590600000000000000
+          end
+          object TableRow1: TfrxTableRow
+            Height = 22.677180000000000000
+            object TableCell1: TfrxTableCell
+              AllowVectorExport = True
+              Restrictions = [rfDontDelete]
+              DataField = 'facultet'
+              DataSet = frxDBDataset5
+              DataSetName = 'frxDBDataset5'
+              Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+              Memo.UTF8W = (
+                '[frxDBDataset5."facultet"]')
+            end
+          end
+        end
+      end
+      object Header1: TfrxHeader
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 56.692950000000000000
+        Top = 328.819110000000000000
+        Width = 718.110700000000000000
+        object Memo8: TfrxMemoView
+          AllowVectorExport = True
+          Left = 37.795300000000000000
+          Top = 11.338590000000000000
+          Width = 275.905690000000000000
+          Height = 26.456710000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -21
+          Font.Name = 'times New Roman'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            #1057#1087#1080#1089#1086#1082' '#1089#1087#1077#1094#1080#1072#1083#1100#1085#1086#1089#1090#1077#1081)
+          ParentFont = False
+        end
+        object TableObject3: TfrxTableObject
+          AllowVectorExport = True
+          Left = 3.779530000000000000
+          Top = 37.795300000000000000
+          object TableColumn6: TfrxTableColumn
+            Width = 378.535482500000000000
+            MaxWidth = 75.590600000000000000
+          end
+          object TableColumn7: TfrxTableColumn
+            Width = 116.535482500000000000
+            MaxWidth = 75.590600000000000000
+          end
+          object TableColumn8: TfrxTableColumn
+            Width = 113.535482500000000000
+            MaxWidth = 75.590600000000000000
+          end
+          object TableColumn9: TfrxTableColumn
+            Width = 80.535482500000000000
+            MaxWidth = 75.590600000000000000
+          end
+          object TableRow3: TfrxTableRow
+            Height = 18.897650000000000000
+            object TableCell6: TfrxTableCell
+              AllowVectorExport = True
+              Restrictions = [rfDontDelete]
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -15
+              Font.Name = 'Times New Roman'
+              Font.Style = [fsBold]
+              Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+              Memo.UTF8W = (
+                #1053#1072#1079#1074#1072#1085#1080#1077)
+              ParentFont = False
+            end
+            object TableCell7: TfrxTableCell
+              AllowVectorExport = True
+              Restrictions = [rfDontDelete]
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -15
+              Font.Name = 'Times New Roman'
+              Font.Style = [fsBold]
+              Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+              Memo.UTF8W = (
+                #1050#1074#1072#1083#1080#1092#1080#1082#1072#1094#1080#1103)
+              ParentFont = False
+            end
+            object TableCell8: TfrxTableCell
+              AllowVectorExport = True
+              Restrictions = [rfDontDelete]
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -15
+              Font.Name = 'Times New Roman'
+              Font.Style = [fsBold]
+              Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+              Memo.UTF8W = (
+                #1054#1095#1085#1072#1103)
+              ParentFont = False
+            end
+            object TableCell9: TfrxTableCell
+              AllowVectorExport = True
+              Restrictions = [rfDontDelete]
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -15
+              Font.Name = 'Times New Roman'
+              Font.Style = [fsBold]
+              Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+              Memo.UTF8W = (
+                #1047#1072#1086#1095#1085#1072#1103)
+              ParentFont = False
+            end
+          end
+        end
+      end
+      object MasterData2: TfrxMasterData
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 18.897650000000000000
+        Top = 408.189240000000000000
+        Width = 718.110700000000000000
+        DataSet = frxDBDataset6
+        DataSetName = 'frxDBDataset6'
+        RowCount = 0
+        object TableObject2: TfrxTableObject
+          AllowVectorExport = True
+          Left = 3.779530000000000000
+          object TableColumn2: TfrxTableColumn
+            Width = 379.881942000000000000
+            MaxWidth = 75.590600000000000000
+          end
+          object TableColumn3: TfrxTableColumn
+            Width = 114.881942000000000000
+            MaxWidth = 75.590600000000000000
+          end
+          object TableColumn4: TfrxTableColumn
+            Width = 115.881942000000000000
+            MaxWidth = 75.590600000000000000
+          end
+          object TableColumn5: TfrxTableColumn
+            Width = 80.881942000000000000
+            MaxWidth = 75.590600000000000000
+          end
+          object TableRow2: TfrxTableRow
+            Height = 18.897650000000000000
+            object TableCell2: TfrxTableCell
+              AllowVectorExport = True
+              Restrictions = [rfDontDelete]
+              DataField = 'specialty'
+              DataSet = frxDBDataset6
+              DataSetName = 'frxDBDataset6'
+              Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+              Memo.UTF8W = (
+                '[frxDBDataset6."specialty"]')
+            end
+            object TableCell3: TfrxTableCell
+              AllowVectorExport = True
+              Restrictions = [rfDontDelete]
+              DataField = 'Qualification'
+              DataSet = frxDBDataset6
+              DataSetName = 'frxDBDataset6'
+              Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+              Memo.UTF8W = (
+                '[frxDBDataset6."Qualification"]')
+            end
+            object TableCell4: TfrxTableCell
+              AllowVectorExport = True
+              Restrictions = [rfDontDelete]
+              DataField = 'Full-time'
+              DataSet = frxDBDataset6
+              DataSetName = 'frxDBDataset6'
+              Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+              Memo.UTF8W = (
+                '[frxDBDataset6."Full-time"]')
+            end
+            object TableCell5: TfrxTableCell
+              AllowVectorExport = True
+              Restrictions = [rfDontDelete]
+              DataField = 'Extramural'
+              DataSet = frxDBDataset6
+              DataSetName = 'frxDBDataset6'
+              Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+              Memo.UTF8W = (
+                '[frxDBDataset6."Extramural"]')
+            end
+          end
+        end
+      end
+      object PageHeader1: TfrxPageHeader
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 22.677180000000000000
+        Top = 200.315090000000000000
+        Width = 718.110700000000000000
+        object Memo7: TfrxMemoView
+          AllowVectorExport = True
+          Left = 37.795300000000000000
+          Top = -3.779530000000000000
+          Width = 219.212740000000000000
+          Height = 26.456710000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -21
+          Font.Name = 'times New Roman'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            #1057#1087#1080#1089#1086#1082' '#1092#1072#1082#1091#1083#1100#1090#1077#1090#1086#1074)
+          ParentFont = False
+        end
+      end
+      object MasterData3: TfrxMasterData
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 41.574830000000000000
+        Top = 449.764070000000000000
+        Width = 718.110700000000000000
+        DataSet = frxDBDataset1
+        DataSetName = 'frxDBDataset1'
+        RowCount = 0
+        object Memo9: TfrxMemoView
+          AllowVectorExport = True
+          Left = 37.795300000000000000
+          Width = 351.496290000000000000
+          Height = 22.677180000000000000
+          Font.Charset = DEFAULT_CHARSET
+          Font.Color = clBlack
+          Font.Height = -21
+          Font.Name = 'Times New Roman'
+          Font.Style = [fsBold]
+          Frame.Typ = []
+          Memo.UTF8W = (
+            #1057#1087#1080#1089#1086#1082' '#1087#1088#1086#1092#1080#1083#1100#1085#1099#1093'  '#1087#1088#1077#1076#1084#1077#1090#1086#1074)
+          ParentFont = False
+        end
+        object TableObject4: TfrxTableObject
+          AllowVectorExport = True
+          Left = 3.779530000000000000
+          Top = 22.677180000000000000
+          object TableColumn10: TfrxTableColumn
+            Width = 369.149815000000000000
+            MaxWidth = 75.590600000000000000
+          end
+          object TableColumn11: TfrxTableColumn
+            Width = 323.149815000000000000
+            MaxWidth = 75.590600000000000000
+          end
+          object TableRow4: TfrxTableRow
+            Height = 18.897650000000000000
+            object TableCell10: TfrxTableCell
+              AllowVectorExport = True
+              Restrictions = [rfDontDelete]
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -15
+              Font.Name = 'Times New Roman'
+              Font.Style = [fsBold]
+              Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+              Memo.UTF8W = (
+                #1053#1072#1079#1074#1072#1085#1080#1077' '#1087#1088#1077#1076#1084#1077#1090#1072)
+              ParentFont = False
+            end
+            object TableCell11: TfrxTableCell
+              AllowVectorExport = True
+              Restrictions = [rfDontDelete]
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clBlack
+              Font.Height = -15
+              Font.Name = 'Times New Roman'
+              Font.Style = [fsBold]
+              Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+              Memo.UTF8W = (
+                #1055#1088#1086#1093#1086#1076#1085#1086#1081' '#1073#1072#1083#1083)
+              ParentFont = False
+            end
+          end
+        end
+      end
+      object MasterData4: TfrxMasterData
+        FillType = ftBrush
+        Frame.Typ = []
+        Height = 18.897650000000000000
+        Top = 514.016080000000000000
+        Width = 718.110700000000000000
+        DataSet = frxDBDataset7
+        DataSetName = 'frxDBDataset7'
+        RowCount = 0
+        object TableObject5: TfrxTableObject
+          AllowVectorExport = True
+          Left = 3.779530000000000000
+          object TableColumn12: TfrxTableColumn
+            Width = 369.724490000000000000
+            MaxWidth = 75.590600000000000000
+          end
+          object TableColumn13: TfrxTableColumn
+            Width = 321.724490000000000000
+            MaxWidth = 75.590600000000000000
+          end
+          object TableRow5: TfrxTableRow
+            Height = 18.897650000000000000
+            object TableCell12: TfrxTableCell
+              AllowVectorExport = True
+              Restrictions = [rfDontDelete]
+              DataField = 'Name'
+              DataSet = frxDBDataset7
+              DataSetName = 'frxDBDataset7'
+              Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+              Memo.UTF8W = (
+                '[frxDBDataset7."Name"]')
+            end
+            object TableCell13: TfrxTableCell
+              AllowVectorExport = True
+              Restrictions = [rfDontDelete]
+              DataField = 'PassingScore'
+              DataSet = frxDBDataset7
+              DataSetName = 'frxDBDataset7'
+              Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
+              Memo.UTF8W = (
+                '[frxDBDataset7."PassingScore"]')
+            end
+          end
+        end
+      end
+    end
+  end
+  object MainMenu1: TMainMenu
+    Left = 16
+    Top = 112
+    object N1: TMenuItem
+      Caption = #1060#1072#1081#1083
+      object N2: TMenuItem
+        Caption = #1055#1077#1095#1072#1090#1100
+        OnClick = N2Click
+      end
+      object N3: TMenuItem
+        Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100' '#1074' PDF'
+      end
+      object N4: TMenuItem
+        Caption = #1047#1072#1082#1088#1099#1090#1100
+        OnClick = N4Click
+      end
+    end
+  end
+  object frxDBDataset1: TfrxDBDataset
+    UserName = 'frxDBDataset1'
+    CloseDataSource = False
+    DataSet = ADOQuery1
+    BCDToCurrency = False
+    Left = 480
+    Top = 40
+  end
+  object ADOQuery1: TADOQuery
+    Active = True
+    Connection = Form1.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT COUNT (*) FROM abiturient')
+    Left = 408
+    Top = 40
+  end
+  object frxDBDataset2: TfrxDBDataset
+    UserName = 'frxDBDataset2'
+    CloseDataSource = False
+    DataSet = ADOQuery2
+    BCDToCurrency = False
+    Left = 480
+    Top = 96
+  end
+  object frxDBDataset3: TfrxDBDataset
+    UserName = 'frxDBDataset3'
+    CloseDataSource = False
+    DataSet = ADOQuery3
+    BCDToCurrency = False
+    Left = 480
+    Top = 152
+  end
+  object frxDBDataset4: TfrxDBDataset
+    UserName = 'frxDBDataset4'
+    CloseDataSource = False
+    DataSet = ADOQuery4
+    BCDToCurrency = False
+    Left = 480
+    Top = 208
+  end
+  object frxDBDataset5: TfrxDBDataset
+    UserName = 'frxDBDataset5'
+    CloseDataSource = False
+    DataSet = ADOQuery5
+    BCDToCurrency = False
+    Left = 480
+    Top = 264
+  end
+  object frxDBDataset6: TfrxDBDataset
+    UserName = 'frxDBDataset6'
+    CloseDataSource = False
+    DataSet = ADOQuery6
+    BCDToCurrency = False
+    Left = 336
+    Top = 40
+  end
+  object frxDBDataset7: TfrxDBDataset
+    UserName = 'frxDBDataset7'
+    CloseDataSource = False
+    DataSet = ADOQuery7
+    BCDToCurrency = False
+    Left = 336
+    Top = 96
+  end
+  object ADOQuery2: TADOQuery
+    Active = True
+    Connection = Form1.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT COUNT (*) FROM facultet')
+    Left = 408
+    Top = 96
+  end
+  object ADOQuery3: TADOQuery
+    Active = True
+    Connection = Form1.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT COUNT (*) FROM specialty')
+    Left = 408
+    Top = 152
+  end
+  object ADOQuery4: TADOQuery
+    Active = True
+    Connection = Form1.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT COUNT (*) FROM subject')
+    Left = 408
+    Top = 208
+  end
+  object ADOQuery5: TADOQuery
+    Active = True
+    Connection = Form1.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM facultet')
+    Left = 408
+    Top = 264
+  end
+  object ADOQuery6: TADOQuery
+    Active = True
+    Connection = Form1.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM specialty')
+    Left = 264
+    Top = 40
+  end
+  object ADOQuery7: TADOQuery
+    Active = True
+    Connection = Form1.ADOConnection1
+    CursorType = ctStatic
+    Parameters = <>
+    SQL.Strings = (
+      'SELECT * FROM subject')
+    Left = 264
+    Top = 96
+  end
+  object frxReportTableObject1: TfrxReportTableObject
+    Left = 24
+    Top = 248
+  end
+end

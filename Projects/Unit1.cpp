@@ -8,6 +8,10 @@
 #include "Unit3.h"
 #include "Unit4.h"
 #include "Unit5.h"
+#include "Unit6.h"
+#include "Unit7.h"
+#include "Unit8.h"
+#include "Unit9.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -29,24 +33,21 @@ void __fastcall TForm1::BitBtn1Click(TObject *Sender)
 
 void __fastcall TForm1::BitBtn3Click(TObject *Sender)
 {
-	Form2->Show();
-	String Name = DBEdit1->Text;
-	Form2->Edit1->Text = Name;
-
-
+	Form8->Show();
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TForm1::SearchBox1Change(TObject *Sender)
 {
-    // Поиск
+	// Поиск
 	String valueSearch = SearchBox1->Text;
 	ADOQuery1->Close();
-	ADOQuery1->SQL->Text = "SELECT [Id_abiturient],[Surname],[Name],[Patronymic],[FormLearning],[abiturient].[Qualification],[specialty].[specialty],[EntryExams],[USE] FROM abiturient JOIN specialty ON abiturient.Id_specialty = specialty.Id_specialty WHERE Surname LIKE '" +valueSearch+"%'";
+	ADOQuery1->SQL->Text = "SELECT * FROM abiturient JOIN specialty ON abiturient.Id_specialty = specialty.Id_specialty WHERE Surname LIKE '" +valueSearch+"%'";
 	ADOQuery1->Active = true;
 	ADOQuery1->Open();
 	if(SearchBox1->Text == ""){
-		ADOQuery1->SQL->Text = "USE FosterComission SELECT TOP 50 [Id_abiturient],[Surname],[Name],[Patronymic],[DateBorn],[FormLearning],[abiturient].[Qualification],[specialty].[specialty],[EntryExams],[USE] FROM abiturient JOIN specialty ON abiturient.Id_specialty = specialty.Id_specialty ORDER BY Id_abiturient DESC";
+		ADOQuery1->SQL->Text = "USE FosterComission SELECT TOP 50 * FROM abiturient JOIN specialty ON abiturient.Id_specialty = specialty.Id_specialty JOIN facultet ON specialty.Id_facultet = facultet.Id_facultet JOIN [Subject] ON abiturient.Id_subject = [Subject].[Id_subject] ORDER BY Id_abiturient DESC";
+		ADOQuery1->Active = true;
 	}
 }
 //---------------------------------------------------------------------------
@@ -56,11 +57,15 @@ void __fastcall TForm1::BitBtn4Click(TObject *Sender)
 {
 	// кнопка удалить
 	if(mrOk==MessageDlg("Вы точно хотите удалить ("+DBEdit1->Text+")?", mtConfirmation,  TMsgDlgButtons() <<mbOK<<mbCancel , 0)) {
-		ADOQuery1->SQL->Text = "DELETE abiturient WHERE Surname = ('" +DBEdit1->Text+ "')";
+		ADOQuery1->SQL->Text = " DELETE abiturient WHERE Surname = ('" +DBEdit1->Text+ "')";
 		ADOQuery1->ExecSQL();
-		ADOQuery1->SQL->Text = "USE FosterComission SELECT TOP 50 [Id_abiturient],[Surname],[Name],[Patronymic],[DateBorn],[FormLearning],[abiturient].[Qualification],[specialty].[specialty],[EntryExams],[USE] FROM abiturient JOIN specialty ON abiturient.Id_specialty = specialty.Id_specialty ORDER BY Id_abiturient DESC";
+		ADOQuery1->SQL->Text = "USE FosterComission SELECT TOP 50 * FROM abiturient JOIN specialty ON abiturient.Id_specialty = specialty.Id_specialty JOIN facultet ON specialty.Id_facultet = facultet.Id_facultet JOIN [Subject] ON abiturient.Id_subject = [Subject].[Id_subject] ORDER BY Id_abiturient DESC";
 		ADOQuery1->Active = true;
 		ShowMessage("Запись удалена");
+		Form6->ADOQuery1->Active = false;
+		Form7->ADOQuery1->Active = false;
+		Form6->ADOQuery1->Active = true;
+		Form7->ADOQuery1->Active = true;
 	} else{}
 }
 //---------------------------------------------------------------------------
@@ -84,4 +89,40 @@ void __fastcall TForm1::N5Click(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
+
+void __fastcall TForm1::N9Click(TObject *Sender)
+{
+	TfrxReport *Report;
+	Report = Form6->frxReport1;
+	Report->Preview = Form6->frxPreview1;
+	Report->ShowReport();
+	Form6->WindowState = wsMaximized;
+	Form6->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::N11Click(TObject *Sender)
+{
+	TfrxReport *Report;
+	Report = Form7->frxReport1;
+	Report->Preview = Form7->frxPreview1;
+	Report->ShowReport();
+	Form7->WindowState = wsMaximized;
+	Form7->Show();
+}
+//---------------------------------------------------------------------------
+
+
+
+
+void __fastcall TForm1::N10Click(TObject *Sender)
+{
+    TfrxReport *Report;
+	Report = Form9->frxReport1;
+	Report->Preview = Form9->frxPreview1;
+	Report->ShowReport();
+	Form9->WindowState = wsMaximized;
+	Form9->Show();
+}
+//---------------------------------------------------------------------------
 

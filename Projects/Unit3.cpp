@@ -5,6 +5,7 @@
 
 #include "Unit3.h"
 #include "Unit2.h"
+#include "Unit6.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -17,7 +18,7 @@ __fastcall TForm3::TForm3(TComponent* Owner)
 //---------------------------------------------------------------------------
 void __fastcall TForm3::BitBtn1Click(TObject *Sender)
 {
-    //Кнопка добавить
+	//Кнопка добавить
 	if(Edit1->Text == ""){
 		ShowMessage("Вы не заполнили поле");
 	} else{
@@ -28,6 +29,12 @@ void __fastcall TForm3::BitBtn1Click(TObject *Sender)
 		ADOQuery1->Active = true;
 		Form2->ADOTable2->Active = false;
 		Form2->ADOTable2->Active = true;
+		Form6->ADOQuery2->Active = false;
+		Form6->ADOQuery2->Active = true;
+		Form6->ADOQuery2->Active = false;
+		Form6->ADOQuery5->Active = false;
+		Form6->ADOQuery2->Active = true;
+		Form6->ADOQuery5->Active = true;
 		}
 }
 //---------------------------------------------------------------------------
@@ -42,6 +49,10 @@ void __fastcall TForm3::BitBtn3Click(TObject *Sender)
 		ADOQuery1->Active = true;
 		Form2->ADOTable2->Active = false;
 		Form2->ADOTable2->Active = true;
+		Form6->ADOQuery2->Active = false;
+		Form6->ADOQuery5->Active = false;
+		Form6->ADOQuery2->Active = true;
+		Form6->ADOQuery5->Active = true;
 	} else{}
 }
 //---------------------------------------------------------------------------
@@ -59,6 +70,10 @@ void __fastcall TForm3::N2Click(TObject *Sender)
 		ADOQuery1->Active = true;
 		Form2->ADOTable2->Active = false;
 		Form2->ADOTable2->Active = true;
+		Form6->ADOQuery2->Active = false;
+		Form6->ADOQuery5->Active = false;
+		Form6->ADOQuery2->Active = true;
+		Form6->ADOQuery5->Active = true;
 		}
 }
 //---------------------------------------------------------------------------

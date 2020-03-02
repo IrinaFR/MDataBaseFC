@@ -42,6 +42,7 @@ __published:	// IDE-managed Components
 	TMenuItem *N8;
 	TMenuItem *N9;
 	TMenuItem *N10;
+	TMenuItem *N11;
 	void __fastcall BitBtn1Click(TObject *Sender);
 	void __fastcall BitBtn3Click(TObject *Sender);
 	void __fastcall SearchBox1Change(TObject *Sender);
@@ -49,6 +50,9 @@ __published:	// IDE-managed Components
 	void __fastcall N6Click(TObject *Sender);
 	void __fastcall N7Click(TObject *Sender);
 	void __fastcall N5Click(TObject *Sender);
+	void __fastcall N9Click(TObject *Sender);
+	void __fastcall N11Click(TObject *Sender);
+	void __fastcall N10Click(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TForm1(TComponent* Owner);

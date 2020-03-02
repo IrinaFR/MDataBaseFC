@@ -13,9 +13,6 @@ Coordinates=454,265,81,36
 [BitBtn5]
 Coordinates=127,210,56,58
 
-[N4]
-Coordinates=454,320,40,36
-
 [N3]
 Coordinates=454,375,40,36
 
@@ -53,6 +50,6 @@ Coordinates=187,446,40,36
 Coordinates=193,210,56,58
 
 []
-Coordinates=550,210,56,58
+Coordinates=454,320,40,36
 Visible=True
 

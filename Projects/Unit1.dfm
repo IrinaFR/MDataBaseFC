@@ -120,10 +120,10 @@ object Form1: TForm1
   object BitBtn3: TBitBtn
     Left = 8
     Top = 178
-    Width = 101
+    Width = 113
     Height = 33
     Cursor = crHandPoint
-    Caption = #1050#1086#1087#1080#1088#1086#1074#1072#1090#1100
+    Caption = #1056#1077#1076#1072#1082#1090#1080#1088#1086#1074#1072#1090#1100
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -152,7 +152,7 @@ object Form1: TForm1
     OnClick = BitBtn4Click
   end
   object DBEdit1: TDBEdit
-    Left = 361
+    Left = 393
     Top = 167
     Width = 121
     Height = 21
@@ -178,29 +178,22 @@ object Form1: TForm1
     Active = True
     Connection = ADOConnection1
     CursorType = ctStatic
+    LockType = ltBatchOptimistic
     Parameters = <>
     SQL.Strings = (
-      'SELECT TOP 50 [Id_abiturient]'
-      '      ,[Surname]'
-      '      ,[Name]'
-      '      ,[Patronymic]'
-      '      ,[DateBorn]'
-      '      ,[FormLearning]'
-      '      ,[abiturient].[Qualification]'
-      '      ,[specialty].[specialty]'
-      '      ,[EntryExams]'
-      '      ,[USE]'
-      '    '
+      'USE FosterComission'
+      'SELECT TOP 50 *'
       '  FROM abiturient'
       
         ' JOIN specialty ON abiturient.Id_specialty = specialty.Id_specia' +
         'lty'
+      'JOIN facultet ON specialty.Id_facultet = facultet.Id_facultet'
+      'JOIN [Subject] ON abiturient.Id_subject = [Subject].[Id_subject]'
       'ORDER BY Id_abiturient DESC')
     Left = 120
     Top = 96
   end
   object DataSource1: TDataSource
-    AutoEdit = False
     DataSet = ADOQuery1
     Left = 200
     Top = 96
@@ -235,9 +228,15 @@ object Form1: TForm1
       Caption = #1054#1090#1095#1105#1090#1099
       object N9: TMenuItem
         Caption = #1054#1073#1097#1072#1103' '#1080#1085#1092#1086#1088#1084#1072#1094#1080#1103
+        OnClick = N9Click
       end
       object N10: TMenuItem
-        Caption = #1055#1086' '#1089#1090#1091#1076#1077#1085#1090#1091
+        Caption = #1055#1086' '#1072#1073#1080#1090#1091#1088#1080#1077#1085#1090#1091
+        OnClick = N10Click
+      end
+      object N11: TMenuItem
+        Caption = #1057#1087#1080#1089#1086#1082' '#1072#1073#1080#1090#1091#1088#1080#1077#1085#1090#1086#1074
+        OnClick = N11Click
       end
     end
   end
